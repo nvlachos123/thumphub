@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Products;
 DROP TABLE IF EXISTS Orders;
-DROP TABLE IF EXISTS order_products;
+DROP TABLE IF EXISTS Order_Products;
 
 
 -- Create Users table
@@ -51,8 +51,8 @@ INSERT INTO Orders (user_id, order_date, status) VALUES (3, '2025-09-11', 'shipp
 INSERT INTO Orders (user_id, order_date, status) VALUES (4, '2025-09-10', 'shipped');
 INSERT INTO Orders (user_id, order_date, status) VALUES (5, '2025-09-09', 'delivered');
 
--- Create order_products table
-CREATE TABLE order_products (
+-- Create Order_Products table
+CREATE TABLE Order_Products (
     order_product_id INTEGER PRIMARY KEY AUTOINCREMENT,
     order_id INTEGER NOT NULL,
     product_id INTEGER NOT NULL,
@@ -62,9 +62,9 @@ CREATE TABLE order_products (
     UNIQUE (order_id, product_id)
 );
 
--- Insert sample data into order_products
-INSERT INTO order_products (order_id, product_id, quantity) VALUES (1, 1, 2);
-INSERT INTO order_products (order_id, product_id, quantity) VALUES (2, 2, 1);
-INSERT INTO order_products (order_id, product_id, quantity) VALUES (3, 3, 3);
-INSERT INTO order_products (order_id, product_id, quantity) VALUES (4, 4, 1);
-INSERT INTO order_products (order_id, product_id, quantity) VALUES (5, 5, 2);
+-- Insert sample data into Order_Products
+INSERT INTO Order_Products (order_id, product_id, quantity) VALUES (1, 1, 2);
+INSERT INTO Order_Products (order_id, product_id, quantity) VALUES (2, 2, 1);
+INSERT INTO Order_Products (order_id, product_id, quantity) VALUES (3, 3, 3);
+INSERT INTO Order_Products (order_id, product_id, quantity) VALUES (4, 4, 1);
+INSERT INTO Order_Products (order_id, product_id, quantity) VALUES (5, 5, 2);
