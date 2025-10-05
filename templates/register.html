@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThumpHub - Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>ThumpHub</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('products') }}">Products</a>
+            <a href="{{ url_for('cart') }}">Cart</a>
+            <a href="{{ url_for('checkout') }}">Checkout</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Register</h2>
+        <br>
+        <!-- Flashed messages, Jinja templating -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            <!-- Check if there are any messages -->
+            {% if messages %}
+                <!-- Loop through the messages and display them as /p html div -->
+                {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+                <br>
+            {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+        <br><br>
+        <p>Have an account? <a href="/login">Login here!</a>.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ThumpHub</p>
+    </footer>
+</body>
+
+</html>

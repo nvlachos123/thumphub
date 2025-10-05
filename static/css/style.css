@@ -1,0 +1,87 @@
+:root {
+    --brand-colour-placeholder: #183285;
+}
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: var(--brand-colour-placeholder);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: var(--brand-colour-placeholder);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: var(--brand-colour-placeholder);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box; 
+    border-radius: .75rem;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
